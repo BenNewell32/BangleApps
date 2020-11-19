@@ -19,7 +19,7 @@ g.setFont("Vector",15).setFontAlign(0,0);
 g.drawString("Rob's", 130, 90);
 
 g.setFont("Vector",40).setFontAlign(0,0);
-g.drawString("big peen!", 130, 130);
+g.drawString("GentleNUDGE!", 130, 130);
 
 /////////
 //BTN 1//
