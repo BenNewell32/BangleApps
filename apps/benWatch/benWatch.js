@@ -48,8 +48,8 @@ function setServer() {
     g.clear(reset);
     g.setFont("Vector", 20).setFontAlign(0, 0);
     g.drawString("SetServer", 130, 90);
-    g.drawString("top btn: Team 1", 130, 90);
-    g.drawString("bottom btn: Team 2", 130, 90);
+    g.drawString("top btn: Team 1", 30, 90);
+    g.drawString("bottom btn: Team 2", 180, 90);
   }
 }
 
