@@ -34,7 +34,7 @@ function pressBtn1() {
     g.drawString(score1 + ":" + score2, 130, 130);
     Bangle.buzz();
   } else {
-    score1 = 5;
+    score1 = score1 + 1;
     g.clear(reset);
     g.setFont("Vector", 40).setFontAlign(0, 0);
     g.drawString("Team 1 Pt!", 130, 90);
@@ -56,7 +56,7 @@ setWatch(
 
 function pressBtn2() {
   if ((start = "true")) {
-    score2 = 10;
+    score2 = score2 + 1;
     g.clear(reset);
     g.setFont("Vector", 40).setFontAlign(0, 0);
     g.drawString("Team 2 Pt!", 130, 90);
