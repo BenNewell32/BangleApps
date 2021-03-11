@@ -6,6 +6,27 @@ var team1server = 0;
 var team2server = 0;
 var log = [];
 
+function pickServer(btn) {
+  if (btn === 3) {
+    team2server = 2;
+    setServer = 0;
+  }
+  if (btn === 1) {
+    team1server = 2;
+    setServer = 0;
+  }
+  g.clear(reset).setFont("6x8");
+  g.setFont("Vector", 15).setFontAlign(0, 0);
+  g.drawString("Game Time:", 130, 90);
+
+  g.setFont("Vector", 20).setFontAlign(0, 0);
+  if (btn === 3) {
+    g.drawString("Team 2 Starting!", 130, 130);
+  } else {
+    g.drawString("Team 1 Starting!", 130, 130);
+  }
+}
+
 ///////////
 //ON LOAD//
 ///////////
@@ -28,14 +49,23 @@ setWatch(
 );
 
 function pressBtn1() {
+  //Set Server
   if ((team1server === 0) & (team2server === 0)) {
-    setServer();
+    if (setServer === 1) {
+      pickServer(1);
+    } else {
+      setServer();
+    }
   }
+
+  //Start Game
   if (team1server === 1 || team2server === 1) {
     if (start === "false") {
       startGame();
     }
   }
+
+  //Count Point
   if (start === "true") {
     countPoint(team1);
     logRecord(team2);
@@ -47,9 +77,9 @@ function setServer() {
   if (setServer === 1) {
     g.clear(reset);
     g.setFont("Vector", 20).setFontAlign(0, 0);
-    g.drawString("SetServer", 130, 90);
-    g.drawString("top btn: Team 1", 130, 120);
-    g.drawString("bottom btn: Team 2", 130, 150);
+    g.drawString("SetServer", 130, 120);
+    g.drawString("top btn: Team 1", 130, 70);
+    g.drawString("bottom btn: Team 2", 130, 180);
   }
 }
 
@@ -100,16 +130,16 @@ setWatch(
   { repeat: true }
 );
 
-function pressBtn2() {
-  if ((start = "true")) {
-    score2 = score2 + 1;
-    g.clear(reset);
-    g.setFont("Vector", 40).setFontAlign(0, 0);
-    g.drawString("Team 2 Pt!", 130, 90);
-    g.drawString(score1 + ":" + score2, 130, 130);
-    Bangle.buzz();
-  }
-}
+function pressBtn2() {}
+
+// if ((start = "true")) {
+//   score2 = score2 + 1;
+//   g.clear(reset);
+//   g.setFont("Vector", 40).setFontAlign(0, 0);
+//   g.drawString("Team 2 Pt!", 130, 90);
+//   g.drawString(score1 + ":" + score2, 130, 130);
+//   Bangle.buzz();
+// }
 
 /////////
 //BTN 3//
@@ -123,17 +153,21 @@ setWatch(
 );
 
 function pressBtn3() {
-  if ((start = "true")) {
-    score1 = 0;
-    score2 = 0;
-    start = "false";
-    g.clear(reset);
-    g.setFont("Vector", 40).setFontAlign(0, 0);
-    g.drawString("Game Over!", 130, 90);
-    g.drawString(score1 + ":" + score2, 130, 130);
-    Bangle.buzz();
+  if (setServer === 1) {
+    pickServer(3);
   }
 }
+
+// if ((start = "true")) {
+//   score1 = 0;
+//   score2 = 0;
+//   start = "false";
+//   g.clear(reset);
+//   g.setFont("Vector", 40).setFontAlign(0, 0);
+//   g.drawString("Game Over!", 130, 90);
+//   g.drawString(score1 + ":" + score2, 130, 130);
+//   Bangle.buzz();
+// }
 
 //LOAD APP
 Bangle.loadWidgets();
