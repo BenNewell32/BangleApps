@@ -2560,7 +2560,7 @@
     "name": "benWatch",
     "icon": "benWatch.png",
     "version": "0.01",
-    "description": "start game logic btn 1",
+    "description": "function order",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
