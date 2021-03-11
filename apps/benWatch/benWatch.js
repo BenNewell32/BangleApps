@@ -1,6 +1,7 @@
 var start = "false";
 var score1 = 0;
 var score2 = 0;
+var setServer = 0;
 var team1server = 0;
 var team2server = 0;
 var log = [];
@@ -42,9 +43,14 @@ function pressBtn1() {
 }
 
 function setServer() {
-  g.clear(reset);
-  g.setFont("Vector", 20).setFontAlign(0, 0);
-  g.drawString("SetServer", 130, 90);
+  setServer = 1;
+  if (setServer === 1) {
+    g.clear(reset);
+    g.setFont("Vector", 20).setFontAlign(0, 0);
+    g.drawString("SetServer", 130, 90);
+    g.drawString("top btn: Team 1", 130, 90);
+    g.drawString("bottom btn: Team 2", 130, 90);
+  }
 }
 
 function startGame() {
