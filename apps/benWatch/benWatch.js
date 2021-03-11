@@ -88,7 +88,7 @@ function startGame() {
   score1 = 0;
   score2 = 0;
   g.clear(reset);
-  g.setFont("Vector", 40).setFontAlign(0, 0);
+  g.setFont("Vector", 20).setFontAlign(0, 0);
   g.drawString("Started!", 130, 90);
   g.drawString(score1 + ":" + score2, 130, 120);
   g.drawString("Team 1 Server:" + team1server, 130, 150);
