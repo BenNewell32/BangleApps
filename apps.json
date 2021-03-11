@@ -2560,7 +2560,7 @@
     "name": "benWatch",
     "icon": "benWatch.png",
     "version": "0.01",
-    "description": "set server logic btn 1 and 3",
+    "description": "start game logic btn 1",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",

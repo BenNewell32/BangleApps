@@ -59,7 +59,7 @@ function pressBtn1() {
   }
 
   //Start Game
-  if (team1server === 1 || team2server === 1) {
+  if (team1server >= 1 || team2server >= 1) {
     if (start === "false") {
       startGame();
     }
@@ -84,9 +84,16 @@ function setServer() {
 }
 
 function startGame() {
+  start = "true";
+  score1 = 0;
+  score2 = 0;
   g.clear(reset);
-  g.setFont("Vector", 20).setFontAlign(0, 0);
-  g.drawString("Started", 130, 90);
+  g.setFont("Vector", 40).setFontAlign(0, 0);
+  g.drawString("Started!", 130, 90);
+  g.drawString(score1 + ":" + score2, 130, 120);
+  g.drawString("Team 1 Server:" + team1server, 130, 150);
+  g.drawString("Team 2 Server:" + team2server, 130, 180);
+  Bangle.buzz();
 }
 
 function countPoint() {
