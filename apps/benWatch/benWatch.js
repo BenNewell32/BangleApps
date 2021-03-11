@@ -35,9 +35,9 @@ function pressBtn1() {
       startGame();
     }
   }
-  if ((start = "true")) {
-    countPoint();
-    logRecord();
+  if (start === "true") {
+    countPoint(team1);
+    logRecord(team2);
   }
 }
 
