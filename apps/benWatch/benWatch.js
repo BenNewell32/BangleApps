@@ -30,10 +30,15 @@ function pressBtn1() {
     score2 = 0;
     g.clear(reset);
     g.setFont("Vector", 40).setFontAlign(0, 0);
-    g.drawString("Game Started", 130, 90);
+    g.drawString("Started!", 130, 90);
     g.drawString(score1 + ":" + score2, 130, 130);
+    Bangle.buzz();
   } else {
-    score1 = score1 + 1;
+    score1 = 5;
+    g.clear(reset);
+    g.setFont("Vector", 40).setFontAlign(0, 0);
+    g.drawString("Game Time", 130, 90);
+    g.drawString(score1 + ":" + score2, 130, 130);
     Bangle.buzz();
   }
 }
