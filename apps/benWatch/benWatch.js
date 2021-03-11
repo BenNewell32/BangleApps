@@ -27,6 +27,42 @@ function pickServer(btn) {
   }
 }
 
+function setServer() {
+  setServer = 1;
+  if (setServer === 1) {
+    g.clear(reset);
+    g.setFont("Vector", 20).setFontAlign(0, 0);
+    g.drawString("SetServer", 130, 120);
+    g.drawString("top btn: Team 1", 130, 70);
+    g.drawString("bottom btn: Team 2", 130, 180);
+  }
+}
+
+function startGame() {
+  start = "true";
+  score1 = 0;
+  score2 = 0;
+  g.clear(reset);
+  g.setFont("Vector", 20).setFontAlign(0, 0);
+  g.drawString("Started!", 130, 90);
+  g.drawString(score1 + ":" + score2, 130, 120);
+  g.drawString("Team 1 Server:" + team1server, 130, 150);
+  g.drawString("Team 2 Server:" + team2server, 130, 180);
+  Bangle.buzz();
+}
+
+function countPoint() {
+  g.clear(reset);
+  g.setFont("Vector", 20).setFontAlign(0, 0);
+  g.drawString("CountPoint and Logged!", 130, 90);
+}
+
+function logRecord() {
+  g.clear(reset);
+  g.setFont("Vector", 20).setFontAlign(0, 0);
+  g.drawString("CountPoint and Logged!", 130, 90);
+}
+
 ///////////
 //ON LOAD//
 ///////////
@@ -68,44 +104,8 @@ function pressBtn1() {
   //Count Point
   if (start === "true") {
     countPoint(team1);
-    logRecord(team2);
+    logRecord(team1);
   }
-}
-
-function setServer() {
-  setServer = 1;
-  if (setServer === 1) {
-    g.clear(reset);
-    g.setFont("Vector", 20).setFontAlign(0, 0);
-    g.drawString("SetServer", 130, 120);
-    g.drawString("top btn: Team 1", 130, 70);
-    g.drawString("bottom btn: Team 2", 130, 180);
-  }
-}
-
-function startGame() {
-  start = "true";
-  score1 = 0;
-  score2 = 0;
-  g.clear(reset);
-  g.setFont("Vector", 20).setFontAlign(0, 0);
-  g.drawString("Started!", 130, 90);
-  g.drawString(score1 + ":" + score2, 130, 120);
-  g.drawString("Team 1 Server:" + team1server, 130, 150);
-  g.drawString("Team 2 Server:" + team2server, 130, 180);
-  Bangle.buzz();
-}
-
-function countPoint() {
-  g.clear(reset);
-  g.setFont("Vector", 20).setFontAlign(0, 0);
-  g.drawString("CountPoint and Logged!", 130, 90);
-}
-
-function logRecord() {
-  g.clear(reset);
-  g.setFont("Vector", 20).setFontAlign(0, 0);
-  g.drawString("CountPoint and Logged!", 130, 90);
 }
 
 // if (start === "false") {
@@ -162,6 +162,12 @@ setWatch(
 function pressBtn3() {
   if (setServer === 1) {
     pickServer(3);
+  }
+
+  //Count Point
+  if (start === "true") {
+    countPoint(team1);
+    logRecord(team1);
   }
 }
 
