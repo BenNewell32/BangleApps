@@ -98,13 +98,13 @@ function pressBtn1() {
   if (team1server >= 1 || team2server >= 1) {
     if (start === "false") {
       startGame();
+    } else {
+      //Count Point
+      if (start === "true") {
+        countPoint(team1);
+        logRecord(team1);
+      }
     }
-  }
-
-  //Count Point
-  if (start === "true") {
-    countPoint(team1);
-    logRecord(team1);
   }
 }
 
