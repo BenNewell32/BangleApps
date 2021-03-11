@@ -81,6 +81,11 @@ function pressBtn3() {
     score1 = 0;
     score2 = 0;
     start = "false";
+    g.clear(reset);
+    g.setFont("Vector", 40).setFontAlign(0, 0);
+    g.drawString("Game Over!", 130, 90);
+    g.drawString(score1 + ":" + score2, 130, 130);
+    Bangle.buzz();
   }
 }
 
