@@ -73,15 +73,15 @@ function countPoint(team) {
     team1server = 0;
     team2server = 1;
   }
-  // logRecord(
-  //   start,
-  //   score1,
-  //   score2,
-  //   setServerVar,
-  //   team1server,
-  //   team2server,
-  //   "point"
-  // );
+  logRecord(
+    start,
+    score1,
+    score2,
+    setServerVar,
+    team1server,
+    team2server,
+    "point"
+  );
   g.clear(reset);
   g.setFont("Vector", 20).setFontAlign(0, 0);
   g.drawString("Point!", 130, 90);
@@ -112,6 +112,9 @@ function logRecord(
     counter: logCounter,
   };
   scoreLog.push(record);
+  if (scoreLog.length > 5) {
+    scoreLog.shift();
+  }
   // console.log(JSON.stringify(scoreLog));
   // console.log("");
 }
@@ -204,7 +207,7 @@ setWatch(
 );
 
 function pressBtn2() {
-  // resetRecords();
+  resetRecords();
 }
 
 /////////
