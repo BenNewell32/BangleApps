@@ -2556,9 +2556,9 @@
     "storage": [{ "name": "gpstimeserver.wid.js", "url": "widget.js" }]
   },
   {
-    "id": "benWatch",
-    "name": "benWatch",
-    "icon": "benWatch.png",
+    "id": "PickleballScore",
+    "name": "PickleballScore",
+    "icon": "PickleballScore.png",
     "version": "0.01",
     "description": "to begin",
     "tags": "clock",
@@ -2566,8 +2566,12 @@
     "readme": "README.md",
     "allow_emulator": true,
     "storage": [
-      { "name": "benWatch.app.js", "url": "benWatch.js" },
-      { "name": "benWatch.img", "url": "benWatch-icon.js", "evaluate": true }
+      { "name": "PickleballScore.app.js", "url": "PickleballScore.js" },
+      {
+        "name": "PickleballScore.img",
+        "url": "PickleballScore-icon.js",
+        "evaluate": true
+      }
     ],
     "sortorder": -9
   },
