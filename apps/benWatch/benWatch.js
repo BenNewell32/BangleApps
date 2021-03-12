@@ -6,6 +6,17 @@ var team1server = 0;
 var team2server = 0;
 var log = [];
 
+function setServer() {
+  setServer = 1;
+  if (setServer === 1) {
+    g.clear(reset);
+    g.setFont("Vector", 20).setFontAlign(0, 0);
+    g.drawString("SetServer", 130, 120);
+    g.drawString("top btn: Team 1", 130, 70);
+    g.drawString("bottom btn: Team 2", 130, 180);
+  }
+}
+
 function pickServer(btn) {
   if (btn === 3) {
     team2server = 2;
@@ -27,17 +38,6 @@ function pickServer(btn) {
   }
 }
 
-function setServer() {
-  setServer = 1;
-  if (setServer === 1) {
-    g.clear(reset);
-    g.setFont("Vector", 20).setFontAlign(0, 0);
-    g.drawString("SetServer", 130, 120);
-    g.drawString("top btn: Team 1", 130, 70);
-    g.drawString("bottom btn: Team 2", 130, 180);
-  }
-}
-
 function startGame() {
   start = "true";
   score1 = 0;
@@ -51,17 +51,17 @@ function startGame() {
   Bangle.buzz();
 }
 
-function countPoint() {
+function countPoint(team) {
   g.clear(reset);
   g.setFont("Vector", 20).setFontAlign(0, 0);
-  g.drawString("CountPoint and Logged!", 130, 90);
+  g.drawString("CountPoint " + team, 130, 90);
 }
 
-function logRecord() {
-  g.clear(reset);
-  g.setFont("Vector", 20).setFontAlign(0, 0);
-  g.drawString("CountPoint and Logged!", 130, 90);
-}
+// function logRecord() {
+//   g.clear(reset);
+//   g.setFont("Vector", 20).setFontAlign(0, 0);
+//   g.drawString("CountPoint and Logged!", 130, 90);
+// }
 
 ///////////
 //ON LOAD//
@@ -102,7 +102,7 @@ function pressBtn1() {
       //Count Point
       if (start === "true") {
         countPoint(team1);
-        logRecord(team1);
+        // logRecord(team1);
       }
     }
   }
