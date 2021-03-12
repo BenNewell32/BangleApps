@@ -172,7 +172,7 @@ g.setFont("Vector", 20).setFontAlign(0, 0);
 g.drawString("Score Keeper!", 130, 130);
 
 g.setFont("Vector", 20).setFontAlign(0, 0);
-g.drawString("Press btn 1 to begin", 130, 180);
+g.drawString("Press Top Btn to begin", 130, 180);
 /////////
 //BTN 1//
 /////////
