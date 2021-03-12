@@ -37,7 +37,9 @@ function pickServer(btn) {
 
   g.setFont("Vector", 20).setFontAlign(0, 0);
   g.setFont("Vector", 20).setFontAlign(0, 0);
-  g.drawString("Press Top Btn to begin", 130, 180);
+  g.drawString("Press Top Btn", 130, 180);
+  g.drawString("to begin", 130, 200);
+
   if (btn === 3) {
     g.drawString("Team 2 Starting!", 130, 130);
   } else {

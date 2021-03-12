@@ -2560,7 +2560,7 @@
     "name": "benWatch",
     "icon": "benWatch.png",
     "version": "0.01",
-    "description": "press top btn to begin page 2",
+    "description": "to begin",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
