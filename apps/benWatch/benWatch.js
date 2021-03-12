@@ -1,6 +1,7 @@
 var start = "false";
 var score1 = 0;
 var score2 = 0;
+var firstServeTeam = 0;
 var setServerVar = 0;
 var team1server = 0;
 var team2server = 0;
@@ -22,10 +23,12 @@ function setServer() {
 function pickServer(btn) {
   if (btn === 3) {
     team2server = 2;
+    firstServeTeam = 2;
     setServerVar = 0;
   }
   if (btn === 1) {
     team1server = 2;
+    firstServeTeam = 1;
     setServerVar = 0;
   }
   g.clear(reset).setFont("6x8");
@@ -133,6 +136,13 @@ function resetRecords() {
     score1 = 0;
     score2 = 0;
     setServerVar = 0;
+    if (firstServeTeam === "1") {
+      team1server = 2;
+      team2server = 0;
+    } else {
+      team1server = 0;
+      team2server = 2;
+    }
   } else {
     var resetVariables = scoreLog[scoreLog.length - 1];
     start = resetVariables.start;
