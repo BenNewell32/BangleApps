@@ -6,7 +6,9 @@ Add screen shots (if possible) to the app folder and link then into this file wi
 
 ## Usage
 
-Describe how to use it
+1. Update Icon
+2. Update App Name
+3. Tell users to press btn one to start game.
 
 ## Features
 
