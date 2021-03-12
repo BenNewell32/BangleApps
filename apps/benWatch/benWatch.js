@@ -73,15 +73,15 @@ function countPoint(team) {
     team1server = 0;
     team2server = 1;
   }
-  logRecord(
-    start,
-    score1,
-    score2,
-    setServerVar,
-    team1server,
-    team2server,
-    "point"
-  );
+  // logRecord(
+  //   start,
+  //   score1,
+  //   score2,
+  //   setServerVar,
+  //   team1server,
+  //   team2server,
+  //   "point"
+  // );
   g.clear(reset);
   g.setFont("Vector", 20).setFontAlign(0, 0);
   g.drawString("Point!", 130, 90);
@@ -112,16 +112,9 @@ function logRecord(
     counter: logCounter,
   };
   scoreLog.push(record);
-  console.log(JSON.stringify(scoreLog));
-  console.log("");
+  // console.log(JSON.stringify(scoreLog));
+  // console.log("");
 }
-
-var start = "false";
-var score1 = 0;
-var score2 = 0;
-var setServerVar = 0;
-var team1server = 0;
-var team2server = 0;
 
 function resetRecords() {
   logCounter = logCounter + 1;
@@ -129,8 +122,8 @@ function resetRecords() {
   resetRecord.action = "reset";
   resetRecord.counter = logCounter;
   resetLog.push(resetRecord);
-  console.log(JSON.stringify(resetLog));
-  console.log("");
+  // console.log(JSON.stringify(resetLog));
+  // console.log("");
   scoreLog.pop();
   if (scoreLog.length < 1) {
     start = "true";
@@ -211,7 +204,7 @@ setWatch(
 );
 
 function pressBtn2() {
-  resetRecords();
+  // resetRecords();
 }
 
 /////////
