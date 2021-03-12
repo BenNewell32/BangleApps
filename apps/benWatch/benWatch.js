@@ -136,7 +136,7 @@ function resetRecords() {
     score1 = 0;
     score2 = 0;
     setServerVar = 0;
-    if (firstServeTeam === "1") {
+    if (firstServeTeam === 1) {
       team1server = 2;
       team2server = 0;
     } else {
