@@ -2560,7 +2560,7 @@
     "name": "benWatch",
     "icon": "benWatch.png",
     "version": "0.01",
-    "description": "remove log history",
+    "description": "Add first team to server variable",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
