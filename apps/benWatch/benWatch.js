@@ -36,6 +36,8 @@ function pickServer(btn) {
   g.drawString("Game Time:", 130, 90);
 
   g.setFont("Vector", 20).setFontAlign(0, 0);
+  g.setFont("Vector", 20).setFontAlign(0, 0);
+  g.drawString("Press Top Btn to begin", 130, 180);
   if (btn === 3) {
     g.drawString("Team 2 Starting!", 130, 130);
   } else {
