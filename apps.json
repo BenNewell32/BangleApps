@@ -2560,7 +2560,7 @@
     "name": "benWatch",
     "icon": "benWatch.png",
     "version": "0.01",
-    "description": "remove console logs",
+    "description": "remove logs due to memmory issue",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
