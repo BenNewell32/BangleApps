@@ -2560,7 +2560,7 @@
     "name": "benWatch",
     "icon": "benWatch.png",
     "version": "0.01",
-    "description": "count ptn btn 1",
+    "description": "remove console logs",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
