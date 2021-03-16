@@ -8,6 +8,7 @@ var team2server = 0;
 var scoreLog = [];
 var logCounter = 0;
 var resetLog = [];
+var file = require("Storage").open("matchHistory.csv", "a");
 
 function setServer() {
   setServerVar = 1;
@@ -121,6 +122,8 @@ function logRecord(
   scoreLog.push(record);
   if (scoreLog.length > 5) {
     scoreLog.shift();
+
+    file.write(record.join(",") + "\n");
   }
   // console.log(JSON.stringify(scoreLog));
   // console.log("");

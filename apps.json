@@ -2559,6 +2559,7 @@
     "id": "PickleballScore",
     "name": "PickleballScore",
     "icon": "PickleballScore.png",
+    "interface": "interface.html",
     "version": "0.01",
     "description": "change icon",
     "tags": "clock",
