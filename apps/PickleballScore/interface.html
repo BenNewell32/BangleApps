@@ -30,11 +30,15 @@
           dataElement.innerHTML =
             `<table>
     <tr>
-      <th>Time</th>
-      <th>Lat</th>
-      <th>Lon</th>
-      <th>Alt</th>
-      <th>Type</th>
+      <th>GameStarted</th>
+      <th>T1Score</th>
+      <th>T2Score</th>
+      <th>ServerVar</th>
+      <th>T1Server</th>
+      <th>T2Server</th>
+      <th>action</th>
+      <th>logCounter</th>
+
     </tr>` +
             data
               .trim()
@@ -42,11 +46,14 @@
               .map((l) => {
                 l = l.split(",");
                 return `<tr>
-      <td>${new Date(l[0] * 1000).toLocaleString()}</td>
+      <td>${l[0]}</td>
       <td>${l[1]}</td>
       <td>${l[2]}</td>
       <td>${l[3]}</td>
       <td>${l[4]}</td>
+      <td>${l[5]}</td>
+      <td>${l[6]}</td>
+      <td>${l[7]}</td>
       </tr>`;
               })
               .join("\n") +
