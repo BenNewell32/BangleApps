@@ -2561,7 +2561,7 @@
     "icon": "PickleballScore.png",
     "interface": "interface.html",
     "version": "0.01",
-    "description": "fix interface table",
+    "description": "test url parm",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
