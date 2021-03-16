@@ -40,7 +40,7 @@
             return;
           }
           // Otherwise parse the data and output it as a table
-          dataElement.innerHTML =
+          dataElement.innerHTML =Http.responseText+
             `<table>
     <tr>
       <th>GameStarted</th>
@@ -72,8 +72,6 @@
               .join("\n") +
             "</table>";
         });
-        url = `http://www.bens.work/${l[0]}`
-        document.getElementById('sendData').onclick = url;
       }
 
       // You can call a utility function to save the data
