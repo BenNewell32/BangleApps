@@ -2561,7 +2561,7 @@
     "icon": "PickleballScore.png",
     "interface": "interface.html",
     "version": "0.01",
-    "description": "change icon",
+    "description": "add interface",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
