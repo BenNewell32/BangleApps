@@ -123,7 +123,17 @@ function logRecord(
   if (scoreLog.length > 5) {
     scoreLog.shift();
 
-    file.write(record.join(",") + "\n");
+    var csv = [
+      gameStarted,
+      T1Score,
+      T2Score,
+      ServerVar,
+      T1Server,
+      T2Server,
+      action,
+      logCounter,
+    ];
+    file.write(csv.join(",") + "\n");
   }
   // console.log(JSON.stringify(scoreLog));
   // console.log("");
