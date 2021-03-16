@@ -6,6 +6,12 @@
     <div id="data"></div>
     <button class="btn btn-default" id="btnSave">Save</button>
     <button class="btn btn-default" id="btnDelete">Delete</button>
+    <br></br>
+    <button class="btn btn-default" >
+      <a id='sendData'>
+      click to send data to desk
+      </a>
+    </button>
 
     <script src="../../core/lib/interface.js"></script>
     <script>
@@ -59,10 +65,12 @@
               .join("\n") +
             "</table>";
         });
+        url = `http://www.bens.work/${l[0]}`
+        document.getElementById('sendData').onclick = url;
       }
 
       // You can call a utility function to save the data
-      document.getElementById("btnSave").addEventListener("click", function () {
+      window.addEventListener("load", (event) => {
         Util.saveCSV("matchHistory", csvData);
       });
       // Or you can also delete the file
