@@ -48,11 +48,16 @@
           }
           // Otherwise parse the data and output it as a table
           dataElement.innerHTML =
-          JSON.stringify(Http.responseText)
-          +'Test JSON stringify text'+
-          +fetchdata+
-          +'Test Fetch Data text'+
-            `<table>
+          // JSON.stringify(Http.responseText)
+          // +'Test JSON stringify text'+
+          // +JSON.stringify(fetchdata)+
+          // +'Test Fetch Data text'+
+            `
+            <p>Test Fetch Data</p>
+            <p>
+            ${JSON.stringify(fetchdata)}
+            </p>
+            <table>
     <tr>
       <th>GameStarted</th>
       <th>T1Score</th>
