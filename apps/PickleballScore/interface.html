@@ -21,10 +21,17 @@
 
       
       function getData() {
-        var fetchdata;
-        fetch('https://evening-springs-78435.herokuapp.com/events')
-        .then(response => response.json())
-        .then(data => console.log(data), fetchdata=data);
+        var AjaxCall=''
+        var settings = {
+          "url": "https://evening-springs-78435.herokuapp.com/events",
+          "method": "GET",
+          "timeout": 0,
+        };
+
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+          AjaxCall=(response);
+        });
 
         const Http = new XMLHttpRequest();
         const url = 'https://evening-springs-78435.herokuapp.com/events';
@@ -48,15 +55,11 @@
           }
           // Otherwise parse the data and output it as a table
           dataElement.innerHTML =
-          // JSON.stringify(Http.responseText)
-          // +'Test JSON stringify text'+
-          // +JSON.stringify(fetchdata)+
-          // +'Test Fetch Data text'+
-            `
-            <p>Test Fetch Data</p>
-            <p>
-            ${JSON.stringify(fetchdata)}
-            </p>
+          `<p>http</p>`+
+          JSON.stringify(Http.responseText)+
+          `<p>ajax</p>`+
+          JSON.stringify(AjaxCall)+
+          `<p>Test Fetch Data</p>
             <table>
     <tr>
       <th>GameStarted</th>
