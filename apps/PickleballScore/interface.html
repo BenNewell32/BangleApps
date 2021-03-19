@@ -40,7 +40,7 @@
             return;
           }
           // Otherwise parse the data and output it as a table
-          dataElement.innerHTML =Http.responseText+
+          dataElement.innerHTML =JSON.stringify(Http.responseText)+
             `<table>
     <tr>
       <th>GameStarted</th>
