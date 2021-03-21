@@ -33,10 +33,14 @@
         Http.send()
         Http.onreadystatechange = (e) => {
           console.log('http get request starting...')
-          // console.log(Http.responseText)
-            httpElement.innerHTML = JSON.stringify(JSON.parse(Http.responseText)[0]);
+          console.log('responsestatus');
+          console.log(Http.statusText);
+          console.log('responsetype');
+          console.log(Http.responseType);
+          console.log('response');
+          console.log(Http.responseText);
+            // httpElement.innerHTML = JSON.stringify(JSON.parse(Http.responseText)[0]);
         }
-        
       }
 
       function fetchGetData(){
