@@ -135,7 +135,7 @@
     "icon": "PickleballScore.png",
     "interface": "interface.html",
     "version": "0.01",
-    "description": "testing my api",
+    "description": "testing old and new api",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
