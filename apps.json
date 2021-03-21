@@ -135,7 +135,7 @@
     "icon": "PickleballScore.png",
     "interface": "interface.html",
     "version": "0.01",
-    "description": "Slim down App Launcher",
+    "description": "Test API GET Calls",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",

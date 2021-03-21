@@ -25,7 +25,7 @@
       function getData() {
         var AjaxCall=''
         var settings = {
-          "url": "https://evening-springs-78435.herokuapp.com/events",
+          "url": "https://evening-springs-78435.herokuapp.com/teams",
           "method": "GET",
           "timeout": 0,
         };
@@ -36,7 +36,7 @@
         });
 
         const Http = new XMLHttpRequest();
-        const url = 'https://evening-springs-78435.herokuapp.com/events';
+        const url = 'https://evening-springs-78435.herokuapp.com/teams';
         Http.open("GET",url);
         Http.send()
         Http.onreadystatechange = (e) => {
