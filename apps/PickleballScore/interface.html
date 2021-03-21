@@ -26,21 +26,20 @@
       var csvData = "";
 
       function httpGetData(){
-        console.log('http get request starting...')
         const Http = new XMLHttpRequest();
         const url = 'https://jsonplaceholder.typicode.com/posts';
         // const url = 'https://evening-springs-78435.herokuapp.com/events';
         Http.open("GET",url);
         Http.send()
         Http.onreadystatechange = (e) => {
-          console.log(Http.responseText)
+          console.log('http get request starting...')
+          // console.log(Http.responseText)
             httpElement.innerHTML = Http.responseText;
         }
         
       }
 
       function fetchGetData(){
-        console.log('fetch get request starting...')
         var requestOptions = {
           method: 'GET',
           redirect: 'follow'
@@ -48,8 +47,10 @@
 
         fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
           .then(response => response.text())
+          .then(console.log('fetch get request starting...'))
+          .then(response => fetchElement.innerHTML=response.text())
           .then(result => console.log(result))
-          .then(result => fetchElement.innerHTML = result)
+          // .then(result => fetchElement.innerHTML = result)
           .catch(error => console.log('error', error));
       }
 
