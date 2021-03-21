@@ -5,7 +5,10 @@
 </head>
   </head>
   <body>
-    <div id="data"></div>
+    <div >API CALL DATA</div> 
+    <div id="APIdata"></div> 
+    <div >FILE DATA</div>
+    <div id="FILEdata"></div>
     <button class="btn btn-default" id="btnSave">Save</button>
     <button class="btn btn-default" id="btnDelete">Delete</button>
     <br></br>
@@ -17,31 +20,11 @@
 
     <script src="../../core/lib/interface.js"></script>
     <script>
-      var dataElement = document.getElementById("data");
+      var dataElement = document.getElementById("FILEdata");
       var csvData = "";
-
-
-      
+      var AjaxCall='no AJAX data'
+      var HTTPCall='no HTTP data'
       function getData() {
-        var AjaxCall=''
-        var settings = {
-          "url": "https://evening-springs-78435.herokuapp.com/teams",
-          "method": "GET",
-          "timeout": 0,
-        };
-
-        $.ajax(settings).done(function (response) {
-          console.log(response);
-          AjaxCall=(response);
-        });
-
-        const Http = new XMLHttpRequest();
-        const url = 'https://evening-springs-78435.herokuapp.com/teams';
-        Http.open("GET",url);
-        Http.send()
-        Http.onreadystatechange = (e) => {
-          console.log(Http.responseText)
-        }
         // show loading window
         Util.showModal("Loading...");
         // get the data
@@ -57,12 +40,7 @@
           }
           // Otherwise parse the data and output it as a table
           dataElement.innerHTML =
-          `<p>http</p>`+
-          JSON.stringify(Http.responseText)+
-          `<p>ajax</p>`+
-          JSON.stringify(AjaxCall)+
-          `<p>Test Fetch Data</p>
-            <table>
+          `<table>
     <tr>
       <th>GameStarted</th>
       <th>T1Score</th>
@@ -95,6 +73,33 @@
         });
       }
 
+
+      function apiCalls(){
+        console.log('starting api calls...');
+        var settings = {
+          "url": "https://evening-springs-78435.herokuapp.com/teams",
+          "method": "GET",
+          "timeout": 0,
+        };
+
+        $.ajax(settings).done(function (response) {
+          console.log('ajax call done.');
+          console.log('ajax response:');
+          console.log(response);
+          AjaxCall=(response);
+        });
+
+        const Http = new XMLHttpRequest();
+        const url = 'https://evening-springs-78435.herokuapp.com/teams';
+        Http.open("GET",url);
+        Http.send()
+        Http.onreadystatechange = (e) => {
+          console.log('HTTP call done.');
+          console.log('HTTP response:');
+          console.log(Http.responseText);
+          HTTPCall=Http.responseText;
+        }
+      }
       // You can call a utility function to save the data
       window.addEventListener("load", (event) => {
         Util.saveCSV("matchHistory", csvData);
@@ -112,6 +117,7 @@
       // Called when app starts
       function onInit() {
         getData();
+        apiCalls();
       }
     </script>
   </body>
