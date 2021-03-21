@@ -28,8 +28,11 @@
       function httpGetData(){
         const Http = new XMLHttpRequest();
         const url = 'https://jsonplaceholder.typicode.com/posts';
-        // const url = 'https://evening-springs-78435.herokuapp.com/events';
+        //const url = 'https://evening-springs-78435.herokuapp.com/events';
         Http.open("GET",url);
+        Http.setRequestHeader('Accept','*/*')
+        Http.setRequestHeader('Accept-Encoding','gzip,deflate,br')
+        Http.setRequestHeader('Connection','keep-alive')
         Http.send()
         Http.onreadystatechange = (e) => {
           console.log('http get request starting...')
@@ -39,7 +42,7 @@
           console.log(Http.responseType);
           console.log('response');
           console.log(Http.responseText);
-            // httpElement.innerHTML = JSON.stringify(JSON.parse(Http.responseText)[0]);
+          httpElement.innerHTML = JSON.stringify(JSON.parse(Http.responseText)[0]);
         }
       }
 
