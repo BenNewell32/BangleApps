@@ -3,6 +3,11 @@
     <link rel="stylesheet" href="../../css/spectre.min.css" />
   </head>
   <body>
+    <div>Http DATA</div>
+    <div id='httpData'></div>
+    <div>Fetch DATA</div>
+    <div id='fetchData'></div>
+    <div>CSV DATA</div>
     <div id="data"></div>
     <button class="btn btn-default" id="btnSave">Save</button>
     <button class="btn btn-default" id="btnDelete">Delete</button>
@@ -16,9 +21,12 @@
     <script src="../../core/lib/interface.js"></script>
     <script>
       var dataElement = document.getElementById("data");
+      var httpElement = document.getElementById("httpData");
+      var fetchElement = document.getElementById("fetchData");
       var csvData = "";
 
-      function getData() {
+      function httpGetData(){
+        console.log('http get request starting...')
         const Http = new XMLHttpRequest();
         const url = 'https://jsonplaceholder.typicode.com/posts';
         // const url = 'https://evening-springs-78435.herokuapp.com/events';
@@ -26,7 +34,26 @@
         Http.send()
         Http.onreadystatechange = (e) => {
           console.log(Http.responseText)
+            httpElement.innerHTML = Http.responseText;
         }
+        
+      }
+
+      function fetchGetData(){
+        console.log('fetch get request starting...')
+        var requestOptions = {
+          method: 'GET',
+          redirect: 'follow'
+        };
+
+        fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
+          .then(response => response.text())
+          .then(result => console.log(result))
+          .then(result => fetchElement.innerHTML = result)
+          .catch(error => console.log('error', error));
+      }
+
+      function getData() {
         // show loading window
         Util.showModal("Loading...");
         // get the data
@@ -41,7 +68,7 @@
             return;
           }
           // Otherwise parse the data and output it as a table
-          dataElement.innerHTML =Http.responseText+
+          dataElement.innerHTML =
             `<table>
     <tr>
       <th>GameStarted</th>
@@ -92,6 +119,8 @@
       // Called when app starts
       function onInit() {
         getData();
+        httpGetData();
+        fetchGetData();
       }
     </script>
   </body>
