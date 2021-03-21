@@ -34,7 +34,7 @@
         Http.onreadystatechange = (e) => {
           console.log('http get request starting...')
           // console.log(Http.responseText)
-            httpElement.innerHTML = Http.responseText[0];
+            httpElement.innerHTML = JSON.parse(Http.responseText)[0];
         }
         
       }
