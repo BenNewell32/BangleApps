@@ -135,7 +135,7 @@
     "icon": "PickleballScore.png",
     "interface": "interface.html",
     "version": "0.01",
-    "description": "convert http response to json ",
+    "description": "convert http response to json back to text ",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
