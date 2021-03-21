@@ -20,7 +20,8 @@
 
       function getData() {
         const Http = new XMLHttpRequest();
-        const url = 'https://evening-springs-78435.herokuapp.com/events';
+        const url = 'https://jsonplaceholder.typicode.com/posts';
+        // const url = 'https://evening-springs-78435.herokuapp.com/events';
         Http.open("GET",url);
         Http.send()
         Http.onreadystatechange = (e) => {
