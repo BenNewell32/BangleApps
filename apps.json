@@ -135,7 +135,7 @@
     "icon": "PickleballScore.png",
     "interface": "interface.html",
     "version": "0.01",
-    "description": "add headers to heroku GET request.",
+    "description": "test GET matches request.",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
