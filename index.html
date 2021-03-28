@@ -52,7 +52,7 @@
     />
     <script src="./navigation.js"></script>
   </head>
-  <body>
+  <body class="bg-dark">
     <!-- Nav Bar -->
     <nav class="p-3 navbar navbar-dark bg-dark">
       <span class="navbar-brand mb-0 h1">
@@ -75,7 +75,7 @@
 
         z-index: 9998 !important;
         width: 280px;
-        height: 60vh;
+        height: 100vh;
         display: none;
       "
     >
@@ -122,7 +122,7 @@
     <div
       id="loadScreen"
       class="text-center text-white bg-dark"
-      style="display: block; height: 100vh"
+      style="display: block; height: 90vh"
     >
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <main class="align-items-center px-3">
@@ -149,9 +149,6 @@
         </footer>
       </div>
     </div>
-
-    <!-- Register Screen -->
-    <div id="registerScreen" style="display: none">Register</div>
 
     <!-- Log In Screen -->
     <div
@@ -197,6 +194,8 @@
         </footer>
       </div>
     </div>
+    <!-- Register Screen -->
+    <div id="registerScreen" style="display: none">Register</div>
     <!-- Home Screen -->
     <div id="homeScreen" style="display: none">Home</div>
     <!-- About Screen -->
@@ -208,7 +207,7 @@
     <!-- Reset Screen -->
     <div id="resetScreen" style="display: none">Reset Email</div>
     <!-- Bangle JS Screen -->
-    <div id="bangleScreen" style="display: none">
+    <div id="bangleScreen" style="display: none; background-color: white">
       <header class="navbar">
         <section class="navbar-section">
           <a
