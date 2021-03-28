@@ -1,15 +1,14 @@
-# Widget Name
+# Resources
 
-Describe the app...
+https://www.npmjs.com/package/cors
+https://fontawesome.com/v3.2.1/icons/
 
-Add screen shots (if possible) to the app folder and link then into this file with ![](<name>.png)
-
-## Usage
+# T0-Dos
 
 1. Update Icon <!-- Done :) -->
 2. Update App Name <!-- Done :) -->
 3. Tell users to press btn one to start game. <!-- Done :) -->
-4. Add storage 
+4. Add storage
 
 ## Features
 
