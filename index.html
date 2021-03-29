@@ -43,12 +43,10 @@
     <meta name="theme-color" content="#5755d9" />
     <title>Shot.Watch</title>
     <link
-      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
       rel="stylesheet"
-    />
-    <link
-      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
-      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     />
     <script src="./sw.navigation.js"></script>
     <script src="./sw.login.js"></script>
@@ -142,13 +140,18 @@
           <p class="lead">
             <button
               type="button"
-              class="btn btn-dark"
+              style="width: 200px"
+              class="btn btn-lg btn-primary"
               onclick="showPage('loginScreen')"
             >
               Log In
             </button>
           </p>
-          <button onclick="showPage('registerScreen')" class="btn btn-primary">
+          <button
+            style="width: 200px"
+            onclick="showPage('registerScreen')"
+            class="btn btn-lg btn-outline-secondary"
+          >
             Register
           </button>
         </main>
@@ -198,11 +201,21 @@
           </div>
           <div style="color: #d27248" id="logInError"></div>
           <br />
-          <button onclick="logIn()" type="submit" class="btn btn-primary">
+          <button
+            onclick="logIn()"
+            type="submit"
+            style="width: 200px"
+            class="btn btn-lg btn-primary"
+          >
             Submit
           </button>
           <br />
-          <button onclick="showPage('registerScreen')" class="btn-link">
+          <br />
+          <button
+            onclick="showPage('registerScreen')"
+            style="width: 200px"
+            class="btn btn-lg btn-outline-secondary"
+          >
             Register
           </button>
         </main>
@@ -259,11 +272,19 @@
           </div>
           <div style="color: #d27248" id="registerError"></div>
           <br />
-          <button onclick="Register()" class="btn btn-primary">Submit</button>
+          <button
+            onclick="Register()"
+            style="width: 200px"
+            class="btn btn-lg btn-primary"
+          >
+            Submit
+          </button>
+          <br />
           <br />
           <button
             type="button"
-            class="btn-link"
+            style="width: 200px"
+            class="btn btn-lg btn-outline-secondary"
             onclick="showPage('loginScreen')"
           >
             Log In
@@ -502,8 +523,18 @@
     <script src="core/js/index.js"></script>
     <script src="core/js/pwa.js" defer></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
   </body>
