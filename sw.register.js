@@ -30,6 +30,7 @@ function checkPassword() {
   if (regPassword === vPassword) {
     checkIfEmailExists();
   } else {
+    document.getElementById("registerError").style.color = "#d27248";
     document.getElementById("registerError").innerHTML =
       "Passwords don't match...";
   }
@@ -49,6 +50,7 @@ function checkIfEmailExists() {
       for (let i = 0; i < users.length; i++) {
         if (users[i].reg_email === regEmail) {
           userExists = 1;
+          document.getElementById("registerError").style.color = "#d27248";
           document.getElementById("registerError").innerHTML =
             "Email already exists. Log in?";
         }
@@ -71,7 +73,10 @@ function createUser() {
     reg_pw: reg_pw,
     reg_date: reg_date,
   }).then((data) => {
-    console.log(data); // JSON data parsed by `data.json()` call
+    document.getElementById("registerError").style.color = "#31a24c";
+    document.getElementById("registerError").innerHTML =
+      "User Created! Please Log In";
+    // console.log(data); // JSON data parsed by `data.json()` call
   });
 }
 
