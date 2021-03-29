@@ -1,7 +1,7 @@
 # Resources
 
 https://www.npmjs.com/package/cors
-https://fontawesome.com/v3.2.1/icons/
+https://feathericons.com/?query=cir
 
 # T0-Dos
 

@@ -42,6 +42,8 @@
     <meta name="msapplication-TileColor" content="#5755d9" />
     <meta name="theme-color" content="#5755d9" />
     <title>Shot.Watch</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -54,17 +56,15 @@
   </head>
   <body class="bg-dark">
     <!-- Nav Bar -->
-    <nav class="p-3 navbar navbar-dark bg-dark">
+    <nav class="pl-3 pr-3 navbar navbar-dark bg-dark">
       <span class="navbar-brand mb-0 h1">
         <div class="px-3 row">
           <div class="col-2">
-            <h4>
-              <i
-                class="icon-reorder"
-                style="cursor: pointer"
-                onclick="closeSideBar()"
-              ></i>
-            </h4>
+            <i
+              onclick="closeSideBar()"
+              style="cursor: pointer"
+              data-feather="menu"
+            ></i>
           </div>
           <div class="col-2">
             <h4>Shot.watch</h4>
@@ -97,9 +97,9 @@
           </div>
           <div class="col-2">
             <i
-              class="icon-remove"
-              style="cursor: pointer"
               onclick="closeSideBar()"
+              style="cursor: pointer"
+              data-feather="x-circle"
             ></i>
           </div>
         </div>
@@ -537,5 +537,8 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
