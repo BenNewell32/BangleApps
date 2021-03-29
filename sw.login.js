@@ -26,6 +26,7 @@ function getUsers() {
       users = jsonResponse;
       console.log(users);
       checLogInCreds(userName, userPassword, users);
+      return users;
     });
 }
 
@@ -34,15 +35,16 @@ function checLogInCreds(inputUsername, inputPassword, users) {
   var userfound = 0;
   console.log("checking user credentials...");
   for (let i = 0; i < arrayLength; i++) {
-    if (users[i].username === inputUsername) {
+    if (users[i].reg_email === inputUsername) {
       userfound = 1;
-      console.log(users[i].username);
-      if (users[i].password === inputPassword) {
+      console.log(users[i].reg_email);
+      if (users[i].reg_pw === inputPassword) {
         currentUser = inputUsername;
         console.log("user found");
         console.log(currentUser);
         showPage("homeScreen");
         document.getElementById("sidebarUserName").innerHTML = currentUser;
+        return users;
       } else {
         document.getElementById("logInError").innerHTML = "Incorrect password.";
       }
