@@ -135,7 +135,7 @@
     "icon": "PickleballScore.png",
     "interface": "interface.html",
     "version": "0.01",
-    "description": "test GET matches request.",
+    "description": "Add matchHistory.csv file back. ",
     "tags": "clock",
     "type": "clock",
     "readme": "README.md",
