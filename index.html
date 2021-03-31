@@ -53,6 +53,7 @@
     <script src="./sw.navigation.js"></script>
     <script src="./sw.login.js"></script>
     <script src="./sw.register.js"></script>
+    <script src="./sw.chart.js"></script>
   </head>
   <body class="bg-dark">
     <!-- Nav Bar -->
@@ -306,9 +307,6 @@
     <div id="homeScreen" style="background-color: white; display: none">
       <div class="container text-center">
         <h1 style="color: black" class="jumbotron-heading">Pickleball</h1>
-        <h3 style="color: lightslategray" class="jumbotron-heading">
-          Shot.watch
-        </h3>
         <div class="row mb-2">
           <div class="col-md-6">
             <div class="card flex-md-row mb-4 box-shadow">
@@ -390,6 +388,24 @@
                 src="./tournaments.jpg"
                 data-holder-rendered="true"
               />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="card flex-md-row mb-4 box-shadow">
+              <canvas id="myChart3"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow">
+              <canvas id="myChart2"></canvas>
+            </div>
+            <div class="card flex-md-row mb-4 box-shadow">
+              <canvas id="myChart4"></canvas>
             </div>
           </div>
         </div>
@@ -596,5 +612,7 @@
     <script>
       feather.replace();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./sw.chart.js"></script>
   </body>
 </html>

@@ -2,6 +2,7 @@
 
 https://www.npmjs.com/package/cors
 https://feathericons.com/?query=cir
+https://www.chartjs.org/docs/latest/getting-started/
 
 # T0-Dos
 

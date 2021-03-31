@@ -21,30 +21,8 @@
     <script src="../../core/lib/interface.js"></script>
     <script>
       var dataElement = document.getElementById("data");
-      var httpElement = document.getElementById("httpData");
       var fetchElement = document.getElementById("fetchData");
       var csvData = "";
-
-      function httpGetData(){
-        const Http = new XMLHttpRequest();
-        // const url = 'https://jsonplaceholder.typicode.com/posts';
-        const url = 'https://evening-springs-78435.herokuapp.com/matches';
-        Http.open("GET",url);
-        Http.setRequestHeader('Accept','*/*')
-        Http.setRequestHeader('Accept-Encoding','gzip,deflate,br')
-        Http.setRequestHeader('Connection','keep-alive')
-        Http.send()
-        Http.onreadystatechange = (e) => {
-          console.log('http get request starting...')
-          console.log('responsestatus');
-          console.log(Http.statusText);
-          console.log('responsetype');
-          console.log(Http.responseType);
-          console.log('response');
-          console.log(Http.responseText);
-          httpElement.innerHTML = JSON.stringify(JSON.parse(Http.responseText)[0]);
-        }
-      }
 
       function fetchGetData(){
         const url = "https://evening-springs-78435.herokuapp.com/users";
