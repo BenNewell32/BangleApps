@@ -1,12 +1,15 @@
+var regName;
 var regEmail;
 var regPassword;
 var vPassword;
 
 function Register() {
   document.getElementById("registerError").innerHTML = "";
+  regName = document.getElementById("registerName").value;
   regEmail = document.getElementById("registerEmail").value;
   regPassword = document.getElementById("registerPassword").value;
   vPassword = document.getElementById("verifyPassword").value;
+  console.log(regName);
   console.log(regEmail);
   console.log(regPassword);
   console.log(vPassword);
@@ -65,10 +68,12 @@ function checkIfEmailExists() {
 }
 
 function createUser() {
+  var reg_name = regName;
   var reg_email = regEmail;
   var reg_pw = regPassword;
   var reg_date = Date();
   postData("https://evening-springs-78435.herokuapp.com/register", {
+    reg_name: reg_name,
     reg_email: reg_email,
     reg_pw: reg_pw,
     reg_date: reg_date,

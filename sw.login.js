@@ -39,7 +39,7 @@ function checLogInCreds(inputUsername, inputPassword, users) {
       userfound = 1;
       console.log(users[i].reg_email);
       if (users[i].reg_pw === inputPassword) {
-        currentUser = inputUsername;
+        currentUser = users[i].reg_name;
         console.log("user found");
         console.log(currentUser);
         showPage("homeScreen");
