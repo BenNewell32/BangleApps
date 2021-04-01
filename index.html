@@ -203,7 +203,7 @@
           <div style="color: #d27248" id="logInError"></div>
           <br />
           <button
-            onclick="logIn();homeCharts()"
+            onclick="logIn();getMatchHistory()"
             type="submit"
             style="width: 200px"
             class="btn btn-lg btn-primary"
@@ -323,11 +323,16 @@
                   <br />
                   <br />
                   <button
-                    onclick=""
+                    onclick="showPage('createMatchScreen')"
                     style="width: 200px"
                     class="btn btn-lg btn-primary"
                   >
-                    Enter
+                    Start Match
+                    <img
+                      style="height: 15px; width: 15px; margin-bottom: 2px"
+                      src="./watch.svg"
+                      alt="Connect watch"
+                    />
                   </button>
                   <br />
                   <br />
@@ -365,11 +370,16 @@
                   <br />
                   <br />
                   <button
-                    onclick=""
+                    onclick="showPage('tournamentScreen')"
                     style="width: 200px"
                     class="btn btn-lg btn-success"
                   >
                     Enter
+                    <img
+                      style="height: 15px; width: 15px; margin-bottom: 2px"
+                      src="./trello.svg"
+                      alt="Connect watch"
+                    />
                   </button>
                   <br />
                   <br />
@@ -391,6 +401,7 @@
             </div>
           </div>
         </div>
+        <div style="font-size: 10px; color: black" id="matchesAPI"></div>
         <div class="row mb-2">
           <div class="col-md-6">
             <div class="card flex-md-row mb-4 box-shadow">
@@ -411,6 +422,13 @@
         </div>
       </div>
     </div>
+
+    <!-- CreateMatch Screen -->
+    <div id="createMatchScreen" style="display: none">Create Match</div>
+
+    <!-- Tournament Screen -->
+    <div id="tournamentScreen" style="display: none">Tournaments</div>
+
     <!-- About Screen -->
     <div id="aboutScreen" style="display: none">About</div>
     <!-- Contact Screen -->

@@ -14,6 +14,8 @@ function hideAllPages() {
   document.getElementById("sideBarScreen").style.display = "none";
   document.getElementById("aboutScreen").style.display = "none";
   document.getElementById("contactScreen").style.display = "none";
+  document.getElementById("createMatchScreen").style.display = "none";
+  document.getElementById("tournamentScreen").style.display = "none";
 }
 
 var closeBar = "true";

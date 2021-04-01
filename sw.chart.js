@@ -1,4 +1,20 @@
+function getMatchHistory() {
+  const url = "https://evening-springs-78435.herokuapp.com/matches";
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (jsonResponse) {
+      console.log("fetch");
+      matches = jsonResponse;
+      document.getElementById("matchesAPI").innerHTML = JSON.stringify(matches);
+      homeCharts();
+      return matches;
+    });
+}
+
 function homeCharts() {
+  console.log(matches);
   var ctx = document.getElementById("myChart1").getContext("2d");
   var myChart = new Chart(ctx, {
     type: "horizontalBar",
