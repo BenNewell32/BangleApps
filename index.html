@@ -433,7 +433,222 @@
     </div>
 
     <!-- CreateMatch Screen -->
-    <div id="createMatchScreen" style="display: none">Create Match</div>
+    <div id="createMatchScreen" style="display: none">
+      <div class="container">
+        <div>
+          <div class="row g-5">
+            <div>
+              <form class="needs-validation" novalidate="">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="team1plyr1" class="form-label"
+                      >[Team 1] Server 1
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="team1plyr1"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 1 required.</div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input-sm"
+                        id="t1SS"
+                      />
+                      <label class="form-check-label-sm" for="same-address"
+                        >Starting Server</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="team1plyr2" class="form-label"
+                      >[Team 1] Server 2
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="team1plyr2"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 2 required.</div>
+                  </div>
+                  <div
+                    style="padding: 5px; margin: auto; height: 2px; width: 80vw"
+                  >
+                    <hr />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="team1plyr1" class="form-label"
+                      >[Team 2] Server 1
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="team1plyr1"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 1 required.</div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input-sm"
+                        id="t2SS"
+                      />
+                      <label class="form-check-label-sm" for="same-address"
+                        >Starting Server</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="team1plyr2" class="form-label"
+                      >[Team 2] Server 2</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="team1plyr2"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 2 required.</div>
+                  </div>
+                  <div
+                    style="padding: 5px; margin: auto; height: 2px; width: 80vw"
+                  >
+                    <hr />
+                  </div>
+                  <div class="col-sm-8">
+                    <label
+                      style="font-size: 15px"
+                      for="cmLocation"
+                      class="form-label"
+                      >Location
+                    </label>
+                    <input
+                      style="font-size: 10px"
+                      type="text"
+                      class="form-control"
+                      id="cmLocation"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 2 required.</div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <label
+                      style="font-size: 15px"
+                      for="cmDate"
+                      class="form-label"
+                      >Date
+                    </label>
+                    <input
+                      style="font-size: 12px"
+                      type="date"
+                      class="form-control"
+                      id="cmDate"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 2 required.</div>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <label
+                      style="font-size: 15px"
+                      for="cmEvent"
+                      class="form-label"
+                      >Event
+                    </label>
+                    <input
+                      style="font-size: 10px"
+                      type="text"
+                      class="form-control"
+                      id="cmEvent"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 2 required.</div>
+                  </div>
+                  <div class="col-sm-3">
+                    <label
+                      style="font-size: 15px"
+                      for="cmTournamentID"
+                      class="form-label"
+                      >Tournament ID
+                    </label>
+                    <input
+                      style="font-size: 10px"
+                      type="text"
+                      class="form-control"
+                      id="cmTournamentID"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 2 required.</div>
+                  </div>
+                  <div class="col-sm-3">
+                    <label
+                      style="font-size: 15px"
+                      for="cmMatchID"
+                      class="form-label"
+                      >Match ID
+                    </label>
+                    <input
+                      style="font-size: 10px"
+                      type="text"
+                      class="form-control"
+                      id="cmMatchID"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 2 required.</div>
+                  </div>
+                  <div class="col-sm-3">
+                    <label
+                      style="font-size: 15px"
+                      for="cmCourtID"
+                      class="form-label"
+                      >Court #
+                    </label>
+                    <input
+                      style="font-size: 10px"
+                      type="text"
+                      class="form-control"
+                      id="cmCourtID"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Valid server 2 required.</div>
+                  </div>
+
+                  <button class="w-100 btn btn-primary btn-lg" type="submit">
+                    Create Match
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Tournament Screen -->
     <div id="tournamentScreen" style="display: none">Tournaments</div>
