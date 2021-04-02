@@ -438,7 +438,7 @@
         <div>
           <div class="row g-5">
             <div>
-              <form class="needs-validation" novalidate="">
+              <div class="needs-validation" novalidate="">
                 <div class="row g-3">
                   <div class="col-sm-6">
                     <label for="team1plyr1" class="form-label"
@@ -485,13 +485,13 @@
                     <hr />
                   </div>
                   <div class="col-sm-6">
-                    <label for="team1plyr1" class="form-label"
+                    <label for="team2plyr1" class="form-label"
                       >[Team 2] Server 1
                     </label>
                     <input
                       type="text"
                       class="form-control"
-                      id="team1plyr1"
+                      id="team2plyr1"
                       placeholder=""
                       value=""
                       required=""
@@ -510,13 +510,13 @@
                   </div>
 
                   <div class="col-sm-6">
-                    <label for="team1plyr2" class="form-label"
+                    <label for="team2plyr2" class="form-label"
                       >[Team 2] Server 2</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="team1plyr2"
+                      id="team2plyr2"
                       placeholder=""
                       value=""
                       required=""
@@ -639,11 +639,15 @@
                     <div class="invalid-feedback">Valid server 2 required.</div>
                   </div>
 
-                  <button class="w-100 btn btn-primary btn-lg" type="submit">
+                  <button
+                    onclick="alert('create match')"
+                    class="w-100 btn btn-primary btn-lg"
+                    href=""
+                  >
                     Create Match
                   </button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
